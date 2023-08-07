@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
-
+import { checkImageURL } from "../utils/index";
 const PopularJobCard = ({ item, selectedJob, handlePress }) => {
   return (
     <TouchableOpacity
@@ -18,6 +18,7 @@ const PopularJobCard = ({ item, selectedJob, handlePress }) => {
       >
         <Image
           source={{ uri: item.employer_logo }}
+          alt="logo"
           resizeMode="contain"
           className="w-7 h-7"
         />
@@ -27,6 +28,7 @@ const PopularJobCard = ({ item, selectedJob, handlePress }) => {
       </Text>
       <View className="mt-4">
         <Text numberOfLines={1}>{item.job_title}</Text>
+        <Text className="text-[#B3AEC6] text-sm">{item.job_country}</Text>
       </View>
     </TouchableOpacity>
   );

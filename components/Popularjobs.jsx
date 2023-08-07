@@ -20,7 +20,7 @@ const Popularjobs = () => {
   return (
     <View className="mt-6">
       <View className="flex-row justify-between items-center">
-        <Text className="text-xl text-primary">Popularjobs</Text>
+        <Text className="text-xl text-primary">Popular Jobs</Text>
         <TouchableOpacity>
           <Text className="text-gray">Show All</Text>
         </TouchableOpacity>
