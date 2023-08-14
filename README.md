@@ -1,5 +1,5 @@
-# Jobs React Native Application
-Job is a React Native application that enables users to conveniently access and explore job postings from various websites, including LinkedIn, utilizing the searchApi as the primary API source. This app incorporates essential features like search functionality to filter job listings and a dedicated job details page, complete with an "Apply to Job" button that seamlessly directs users to the corresponding job application page on the respective website.
+# JobFinder React Native Application
+JobFinder is a React Native application that enables users to conveniently access and explore job postings from various websites, including LinkedIn, utilizing the searchApi as the primary API source. This app incorporates essential features like search functionality to filter job listings and a dedicated job details page, complete with an "Apply to Job" button that seamlessly directs users to the corresponding job application page on the respective website.
 ## Screenshoots
 
 ### Home Page
