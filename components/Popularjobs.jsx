@@ -16,14 +16,14 @@ const Popularjobs = () => {
     query: "React developer",
     num_pages: 1,
   });
+  const handleCardPress = (item) => {
+    router.push(`/job-details/${item.job_id}`);
+  };
 
   return (
     <View className="mt-6">
       <View className="flex-row justify-between items-center">
         <Text className="text-xl text-primary">Popular Jobs</Text>
-        <TouchableOpacity>
-          <Text className="text-gray">Show All</Text>
-        </TouchableOpacity>
       </View>
 
       <View className="mt-3">
@@ -38,7 +38,9 @@ const Popularjobs = () => {
             contentContainerStyle={{ columnGap: 16 }}
             keyExtractor={(item) => item?.job_id}
             data={data}
-            renderItem={({ item }) => <PopularJobCard item={item} />}
+            renderItem={({ item }) => (
+              <PopularJobCard item={item} handlePress={handleCardPress} />
+            )}
           />
         )}
       </View>

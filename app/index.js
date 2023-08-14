@@ -11,24 +11,19 @@ import {
 
 const Home = () => {
   const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <SafeAreaView className="flex-1 bg-grey">
       <Stack.Screen
         options={{
           headerStyle: { backgroundColor: "#FAFAFC" },
           headerShadowVisible: false,
-          headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="6" />
-          ),
-          headerRight: () => (
-            <ScreenHeaderBtn iconUrl={images.profile} dimension="10" />
-          ),
           headerTitle: "",
         }}
       />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className="flex-1 p-4">
-          <Welcome />
+          <Welcome searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           <Popularjobs />
           <Nearbyjobs />
         </View>
